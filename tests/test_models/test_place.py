@@ -26,7 +26,6 @@ class TestPlace(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Place testing setup.
-
         Temporarily renames any existing file.json.
         Resets FileStorage objects dictionary.
         Creates FileStorage, DBStorage and Place instances for testing.
@@ -55,7 +54,6 @@ class TestPlace(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """Place testing teardown.
-
         Restore original file.json.
         Delete test instances.
         """

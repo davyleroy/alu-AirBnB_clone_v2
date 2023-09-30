@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines unittests for console.py."""
+"""unittests for console.py."""
 import os
 import pep8
 import unittest
@@ -17,7 +17,6 @@ class TestHBNBCommand(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """HBNBCommand testing setup.
-
         Temporarily rename any existing file.json.
         Reset FileStorage objects dictionary.
         Create an instance of the command interpreter.
@@ -31,7 +30,6 @@ class TestHBNBCommand(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """HBNBCommand testing teardown.
-
         Restore original file.json.
         Delete the test HBNBCommand instance.
         """

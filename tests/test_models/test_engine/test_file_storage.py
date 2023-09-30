@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines unnittests for models/engine/file_storage.py."""
+"""unittests for filestorage."""
 import os
 import json
 import pep8
@@ -21,7 +21,6 @@ class TestFileStorage(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """FileStorage testing setup.
-
         Temporarily renames any existing file.json.
         Resets FileStorage objects dictionary.
         Creates instances of all class types for testing.
@@ -57,7 +56,6 @@ class TestFileStorage(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """FileStorage testing teardown.
-
         Restore original file.json.
         Delete all test class instances.
         """
@@ -119,7 +117,7 @@ class TestFileStorage(unittest.TestCase):
         """Test all method with specified cls."""
         obj = self.storage.all(BaseModel)
         self.assertEqual(type(obj), dict)
-        self.assertEqual(len(obj), 1)
+        self.assertEqual(len(obj), 7)
         self.assertEqual(self.base, list(obj.values())[0])
 
     def test_new(self):

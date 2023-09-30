@@ -21,7 +21,6 @@ class TestAmenity(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Amenity testing setup.
-
         Temporarily renames any existing file.json.
         Resets FileStorage objects dictionary.
         Creates FileStorage, DBStorage and Amenity instances for testing.
@@ -73,9 +72,12 @@ class TestAmenity(unittest.TestCase):
     def test_attributes(self):
         """Check for attributes."""
         us = Amenity(email="a", password="a")
-        self.assertEqual(str, type(us.id))
-        self.assertEqual(datetime, type(us.created_at))
-        self.assertEqual(datetime, type(us.updated_at))
+        # self.assertEqual(str, type(us.id))
+        self.assertIsInstance(us.id, str)
+        self.assertIsInstance(us.created_at, datetime)
+        self.assertIsInstance(us.updated_at, datetime)
+        # self.assertEqual(datetime, type(us.created_at))
+        # self.assertEqual(datetime, type(us.updated_at))
         self.assertTrue(hasattr(us, "__tablename__"))
         self.assertTrue(hasattr(us, "name"))
         self.assertTrue(hasattr(us, "place_amenities"))

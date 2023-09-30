@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines the City class."""
+"""City class."""
 from models.base_model import Base
 from models.base_model import BaseModel
 from sqlalchemy import Column
@@ -10,9 +10,7 @@ from sqlalchemy.orm import relationship
 
 class City(BaseModel, Base):
     """Represents a city for a MySQL database.
-
     Inherits from SQLAlchemy Base and links to the MySQL table cities.
-
     Attributes:
         __tablename__ (str): The name of the MySQL table to store Cities.
         name (sqlalchemy String): The name of the City.

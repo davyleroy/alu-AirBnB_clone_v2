@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines unnittests for models/engine/db_storage.py."""
+"""Unittests for database storage"""
 import pep8
 import models
 import MySQLdb
@@ -25,7 +25,6 @@ class TestDBStorage(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """DBStorage testing setup.
-
         Instantiate new DBStorage.
         Fill DBStorage test session with instances of all classes.
         """
@@ -53,7 +52,6 @@ class TestDBStorage(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """DBStorage testing teardown.
-
         Delete all instantiated test classes.
         Clear DBStorage session.
         """
